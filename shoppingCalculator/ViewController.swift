@@ -350,6 +350,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 //find the current states sales tax
                 if(stateInfo.prefix(2) == state){
                     salesTax = String(stateInfo.suffix(4))
+		    return salesTax
                 }
             }
         } catch(_){
