@@ -182,7 +182,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         //calculate the final price
-        let finalPrice = price - (price*(discount/100.0)) + (price*(tax/100.0))
+        let finalPrice = (price - (price*(discount/100.0)))*(1+(tax/100.0))
         
         //display the final price
         let displayText = "$\(String(format: "%.2f", finalPrice))"
